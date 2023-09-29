@@ -1,0 +1,61 @@
+.header{
+   height: 100px;
+   width: 100%;
+   background: tomato;
+   display: flex;
+   color: azure;
+   justify-content: space-between;
+   align-items: center;
+}
+.logo{
+    padding: 7.5px;
+}
+.nav-links ul{
+ display: flex;
+ flex: 5;
+ align-items: center;
+ padding: 10px;
+ margin-left: 10px;
+
+}
+.nav-links ul li{
+    margin-left: 10px;
+    list-style: none;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+ul li button{
+ padding: 4px;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  background: none;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 5px;
+  color: aliceblue;
+  background: black;
+  cursor: pointer;
+}
+ul li button:hover{
+    color: black;
+    background: bisque;
+    border: none;
+    
+}
+.search{
+    padding: 10px;
+}
+
+.search input{
+    height: 50px;
+    width: 300px;
+    background: none;
+    outline: none;
+    border: 2px solid black;
+    color: aliceblue;
+    border-radius: 8px;
+}

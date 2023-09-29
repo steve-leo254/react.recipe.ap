@@ -1,0 +1,44 @@
+.card{
+    height: 450px;
+    width: 450px;
+    margin-left: 30px; ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.36);
+-webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.36);
+-moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.36);
+}
+
+img{
+ height: 300px;
+ width: 200px;
+ object-fit: contain;
+ 
+}
+.information{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 10px;
+}
+.native{
+    font-size: large;
+    font-weight: 700;
+    padding: 10px;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    width: 400px;background: rgb(255, 255, 255);
+    align-items: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.36);
+-webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.36);
+-moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.36);
+
+    
+}
