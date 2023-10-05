@@ -1,17 +1,17 @@
-
+//import React from "react";
 import "./board.css"
 import Card from "./card";
 import { useState, useEffect } from "react"
 //import Card from "./card";
 
 
-export default function Body(){
 
+export default function Body(){
 
     const [items, setItems] = useState(true);
     const [loading, setLoading] = useState(true)
 
- useEffect(()=>{
+ 
     const fetcher = async ()=>{
         try {
             const res = await fetch('https://651401808e505cebc2ea8462.mockapi.io/shopping')
@@ -25,19 +25,17 @@ export default function Body(){
         }
     }
     fetcher()
- }, [])
+ 
+
+   const card = items.map(()=>{
+    return(
+        <div className="card">
+
+        </div>
+    )
+   })
 
 
-const display  = items.map((item)=>{
-       return(
-        <Card 
-        name={item.name},
-        image={item.type}
-        
-        
-        />
-       )
-})
  
 
     return(
@@ -49,7 +47,7 @@ const display  = items.map((item)=>{
                    Get Recipes
                 </button>
                 <div className="display">
-                    {loading ? <p>we're almost there</p> : display}
+                    {loading ? <p>we're almost there</p> : card}
                 </div>
                 </div>
             </div>
