@@ -4,7 +4,7 @@
     return<>
      <div className="card">
         <div className="image">
-            <img src={pexels} alt="my photo" srcset="" 
+            <img src={pexels} alt="my photo" srcset="image" 
             width={100}
             />
         </div>

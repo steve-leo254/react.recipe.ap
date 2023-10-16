@@ -1,6 +1,7 @@
 //import React from "react";
 import "./board.css"
 import Card from "./card";
+import "./card.css"
 import { useState, useEffect } from "react"
 //import Card from "./card";
 
@@ -8,7 +9,7 @@ import { useState, useEffect } from "react"
 
 export default function Body(){
 
-    const [items, setItems] = useState(true);
+    const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true)
 
  
@@ -20,18 +21,29 @@ export default function Body(){
             setLoading(false)
             console.log(items)
         } catch (error) {
-            console.error("thsi is a new error", error)
+            console.error("this is a new error", error)
             setLoading(false)
         }
     }
     fetcher()
  
 
-   const card = items.map(()=>{
+   const card = items.map((item)=>{
     return(
-        <div className="card">
-
+        <div className="cards">
+            <div className="card" key={item.id}>
+        <div className="image">
+            <img src={item.image} alt="my photo"
+            width={100}
+            />
         </div>
+        <div className="information">
+          <div className="name">{item.name}</div>
+          <div className="type">{item.cloth}</div>
+          <div className="native">{item.price}</div>
+        </div> 
+        </div>
+     </div>
     )
    })
 
@@ -39,18 +51,10 @@ export default function Body(){
  
 
     return(
-        <div className="body">
-            <div className="title">
-                <h1>Your Favourite Recipes</h1>
-                <div className="foodds">
-                <button className="button" onClick={fetcher}>
-                   Get Recipes
-                </button>
-                <div className="display">
-                    {loading ? <p>we're almost there</p> : card}
-                </div>
-                </div>
-            </div>
+       <div className="all-cards">
+          <div className="display">
+                    {loading ? <p>Don't Worry Your Items are Loading</p> : card}
         </div>
+       </div>
     )
 }
